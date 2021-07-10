@@ -1,0 +1,37 @@
+@import 'values';
+@import 'grid';
+
+//$column-border-color: 1px solid rgba(233, 29, 99, 0.18);
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+}
+
+
+
+.grid-helper {
+  display: grid;
+  //display: none;
+  position: absolute;
+  width: 58%;
+  height: 100%;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(15, 1fr);
+
+  .column {
+    border-left: $column-border-color;
+    border-right: $column-border-color;
+    color: #eee;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
