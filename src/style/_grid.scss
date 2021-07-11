@@ -1,118 +1,161 @@
-$column-border-color: 1px solid rgba(233, 29, 99, 0.18);
+
+
+.mobile-container {
+  display: none;
+  padding: 30px;
+  height: calc(100vh - 60px);
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page-logo {
+    text-align: center;
+    width: 125px;
+  }
+
+  .page-illustration {
+    width: 300px;
+  }
+
+  .page-title {
+    width: inherit;
+    font-size: 32px;
+    color: $title-color;
+  }
+  .page-paragraph {
+    width: inherit;
+    font-size: $paragraph-size;
+    line-height: 13px;
+  }
+  .page-link {
+    width: inherit;
+    margin: 0;
+    font-size: $link-size;
+    color: #777;
+  }
+
+  .page-copyright {
+    font-size: $copyright-size;
+  }
+}
 
 .grid-container {
-
-  //width: 200px;
-
+  margin-top: $margin-top;
   display: grid;
-  padding-top: 7vh;
-  grid-template-rows: repeat(80, 10px);
-  grid-template-columns: repeat(13, minmax(75px, 1fr));
-  margin-left: 6.667%;
-  margin-right: 6.667%;
+  grid-template-rows: repeat($rows-number, $row-width);
+  grid-template-columns: repeat($columns-number, $column-width);
+  //grid-template-columns: repeat(13, calc(41px + 7.5px));
   //background-color: rgba(173, 216, 230, 0.33);
 
-  grid-auto-columns: minmax(2fr, 7fr);
-
-
+  @media screen and (max-width: $breakpoint-sm) {
+    display: none;
+  }
 
   .grid-item {
-    border: 2px solid #214ca0;
-
-    font-size: 1em;
-    font-weight: bold;
+    border: $border-thickness solid $blue-color;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+    }
   }
 
   .grid-item-1 {
     img {
-      width: 150px;
+      width: 105px;
     }
     border-right: none;
-    grid-column: span 3;
-    grid-row: span 12;
+    grid-column: 1 / 4;
+    grid-row: span 10;
   }
   .grid-item-2 {
     border-right: none;
     grid-column: span 7;
-    grid-row: span 15;
+    grid-row: span 13;
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
   }
   .grid-item-3 {
     grid-column: span 3;
-    grid-row: span 15;
-
+    grid-row: span 13;
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
   }
   .grid-item-4 {
     border-top: none;
-    grid-column: 11 / end;
-    grid-row: span 5;
+    grid-column: 11 / 14;
+    grid-row: span 4;
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+  .grid-item-image {
+    border: none;
+    img {
+      width: 475px;
+    }
+    grid-column: span 8;
+    grid-row: 18 / 56;
+  }
+  .grid-item-header {
+    border: none;
+    h1 {
+      margin-left: -$text-offset;
+    }
+    grid-column: 11 / 14;
+    grid-row: 29/ 40;
+  }
+  .grid-item-paragraph {
+    border: none;
+    p {
+      margin-left: $text-offset;
+    }
+    grid-column: 11 / 14;
+    grid-row: 43 / 52;
+  }
+
+  .grid-item-link {
+    border: none;
+    a {
+      margin-left: $text-offset;
+    }
+    grid-column: 11 / 14;
+    grid-row: 56 / 60;
+  }
+  .grid-item-copyright {
+    border: none;
+    grid-column: 1 / 4;
+    grid-row: 56 / 60;
   }
 }
 
 
 
+.page-title {
+  width: $right-column-text-max-width;
+  font-size: $title-size;
+  color: $title-color;
+}
+.page-paragraph {
+  width: $right-column-text-max-width;
+  font-size: $paragraph-size;
+  line-height: 13px;
+}
+.page-link {
+  width: $right-column-text-max-width;
+  margin-left: $text-offset;
+  font-size: $link-size;
+  color: #777;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$cell-width: calc(100% / 15);
-
-.container {
-  display: flex;
-  //width: calc(100% / 13);
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-
-  .item {
-    border: 1px solid #214ca0;
-    width: $cell-width;
-    text-align: center;
-  }
-
-  .item-1 {
-    border-right: none;
-    width: calc(#{$cell-width} * 3);
-    height: 10%;
-  }
-  .item-2 {
-    border-right: none;
-    width: calc(#{$cell-width} * 7);
-    height: 15%;
-  }
-  .item-3 {
-    //border-right: none;
-    width: calc(#{$cell-width} * 3);
-    height: 20%;
-  }
+.page-copyright {
+  font-size: $copyright-size;
+  margin-right: auto;
+  margin-top: 0;
 }
