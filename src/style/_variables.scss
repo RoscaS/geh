@@ -9,7 +9,7 @@ $text-color: #373639;
 $title-color: #4f4f4f;
 
 $margin-top: 3rem;
-$rows-number: 60;
+$rows-number: 63;
 $row-width: 9.6px;
 $columns-number: 13;
 $column-width: 59.7px;
@@ -25,4 +25,6 @@ $link-size: 10.5px;
 $copyright-size: 11.5px;
 
 
-$breakpoint-sm: 879px;
+$breakpoint-md: 879px;
+$breakpoint-sm: 732px;
+$breakpoint-xs: 640px;
