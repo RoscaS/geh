@@ -10,21 +10,23 @@ $title-color: #4f4f4f;
 
 $margin-top: 3rem;
 $rows-number: 63;
-$row-width: 9.6px;
+//$row-width: 9.6px;
+$row-width: 11.6px;
 $columns-number: 13;
-$column-width: 59.7px;
+//$column-width: 59.7px;
+$column-width: 75px;
 //$column-width: calc(41px + 7.5px);
 
 $border-thickness: 2px;
 $right-column-text-max-width: 175px;
 $text-offset: 5px;
 
-$title-size: 48px;
-$paragraph-size: 10.5px;
-$link-size: 10.5px;
-$copyright-size: 11.5px;
+$title-size: 58px;
+$paragraph-size: 12.5px;
+$link-size: 12.5px;
+$copyright-size: 12.5px;
 
 
-$breakpoint-md: 879px;
+$breakpoint-md: 985px;
 $breakpoint-sm: 732px;
-$breakpoint-xs: 640px;
+$breakpoint-xs: 690px;
