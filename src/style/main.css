@@ -164,6 +164,18 @@
   font-size: 58px;
   color: #4f4f4f;
 }
+@media screen and (max-width: 690px) {
+  .page-title {
+    padding-top: 1em;
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .page-title {
+    padding-top: 1em;
+    font-size: 2em;
+  }
+}
 
 .page-paragraph {
   font-size: 12.5px;
