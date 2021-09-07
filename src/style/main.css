@@ -193,12 +193,12 @@
 
 @font-face {
   font-family: Vision;
-  src: url("src/assets/fonts/Typeface_Vision.otf");
+  src: url("../assets/fonts/Typeface_Vision.otf");
 }
 @font-face {
   font-family: Vision;
   font-weight: bold;
-  src: url("src/assets/fonts/Typeface_Vision-Bold.otf");
+  src: url("../assets/fonts/Typeface_Vision-Bold.otf");
 }
 body {
   font-family: Vision, sans-serif !important;
