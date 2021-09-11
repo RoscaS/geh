@@ -103,3 +103,5 @@ dist/
 
 # Firebase cache
 .firebase
+
+.DS_Store
